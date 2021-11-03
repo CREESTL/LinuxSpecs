@@ -1,6 +1,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+
 " Init Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -14,6 +15,8 @@ Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'flazz/vim-colorschemes'
 Plugin 'sonph/onehalf', {'rtp': 'vim/'}
+Plugin 'tomlion/vim-solidity'
+Plugin 'scrooloose/nerdtree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -22,6 +25,8 @@ filetype plugin indent on    " required
 " Line numbers
 set number
 
+" Always change Vim directory to the current one
+set autochdir
 
 " Tabs for Python
 set tabstop=4 
@@ -68,11 +73,19 @@ set clipboard=unnamed
 set ruler
 
 set hidden
-nnoremap <C-N> :bnext<CR>
-nnoremap <C-P> :bprev<CR>
 
 " Turn the sound off
 set visualbell t_vb=
+
+" NERDTree settings
+" Open NERDTree each time vim is running
+autocmd VimEnter * NERDTree | wincmd p
+" Close NERDTree each time with a single :q
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+" Key mappings
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
 
 
 " Set colorscheme and font
