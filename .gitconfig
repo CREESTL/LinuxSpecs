@@ -1,0 +1,18 @@
+[user]
+	email = kroymw3@yandex.ru
+	name = CREESTL
+[cola]
+	spellcheck = false
+[alias]
+    tree = log --all --decorate --graph
+	adog = log --all --decorate --oneline --graph
+
+
+# Enforce using SSH instead of HTTP every time
+# (uncomment when needed)
+#[url "ssh://git@github.com/"]
+  #insteadOf = https://github.com/
+#[url "ssh://git@gitlab.com/"]
+  #insteadOf = https://gitlab.com/
+#[url "ssh://git@bitbucket.org/"]
+  #insteadOf = https://bitbucket.org/
