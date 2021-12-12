@@ -49,9 +49,9 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: completions=(ssh git bundler gem pip pip3)
 # Add wisely, as too many completions slow down shell startup.
 completions=(
-  git
   composer
   ssh
+  git
 )
 
 # Which aliases would you like to load? (aliases can be found in ~/.oh-my-bash/aliases/*)
@@ -67,8 +67,8 @@ aliases=(
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
   bashmarks
+  git
 )
 
 source $OSH/oh-my-bash.sh
@@ -100,3 +100,6 @@ source $OSH/oh-my-bash.sh
 # Example aliases
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
+alias boom = "shutdown now"
+alias sleep = "systemctl suspend"
+
