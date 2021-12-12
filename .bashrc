@@ -100,6 +100,6 @@ source $OSH/oh-my-bash.sh
 # Example aliases
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
-alias boom = "shutdown now"
-alias sleep = "systemctl suspend"
+alias boom="shutdown now"
+alias sleep="systemctl suspend"
 
