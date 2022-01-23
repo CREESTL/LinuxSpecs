@@ -173,6 +173,9 @@ set shortmess+=c
 " Show numbers of lines
 set number
 
+" Set relative line numbers
+set relativenumber
+
 " Disable creation of .swp files
 set noswapfile
 
