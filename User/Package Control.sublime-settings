@@ -1,0 +1,15 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"gruvbox",
+		"LSP",
+		"LSP-file-watcher-chokidar",
+		"LSP-rust-analyzer",
+		"NeoVintageous",
+		"Package Control",
+	],
+}

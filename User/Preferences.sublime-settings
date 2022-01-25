@@ -1,0 +1,15 @@
+{
+	"color_scheme": "gruvbox (Dark) (Medium).sublime-color-scheme",
+	"theme": "gruvbox.sublime-theme",
+	"ignored_packages":
+	[
+		"ActionScript",
+		"NeoVintageous",
+		"Six",
+		"Vintage",
+		"Vintageous",
+	],
+	"neovintageous_build_version": 11100,
+	"font_size": 11,
+	"remember_full_screen": true,
+}
