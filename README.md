@@ -17,3 +17,8 @@ Full guide for Rust part of configuration is also [here](https://sharksforarms.d
 ### Specs for Git
 - You can find all configuration information in `.gitconfig` file. If you want to use it - copy it to `~/` directory
 
+### Specs for Sublime Text
+- You can find all configuration information in `User/` directory. If you want to use it - copy the whole directory to:
+  -  `~/.config/sublime-text/Packages/` on Linux
+  - `~/Library/Application Support/Sublime Text/Packages` on Mac
+  - `%APPDATA%\Sublime Text\Data\Packages` on Windows
