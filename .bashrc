@@ -102,4 +102,6 @@ source $OSH/oh-my-bash.sh
 # alias ohmybash="mate ~/.oh-my-bash"
 alias boom="shutdown now"
 alias sleep="systemctl suspend"
+alias sublime="subl"
+
 
