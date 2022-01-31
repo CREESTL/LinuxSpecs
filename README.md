@@ -1,5 +1,5 @@
 ### Specs for NeoVim
-- Install NeoVim as shown [here](https://thomasventurini.com/articles/install-neovim-05-in-ubuntu/)
+- Install NeoVim as shown [here](https://thomasventurini.com/articles/install-neovim-05-in-ubuntu/) (>0.5.0 required)
 - Installed [VimPlug](https://github.com/junegunn/vim-plug) plugin manager
 - Installed `pyright` LSP server tool: `sudo npm install -g pyright`
 - Installed [rust-analyzer](https://rust-analyzer.github.io/manual.html#rust-analyzer-language-server-binary) LSP server tool
