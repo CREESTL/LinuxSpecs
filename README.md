@@ -3,7 +3,7 @@
 - Installed [VimPlug](https://github.com/junegunn/vim-plug) plugin manager
 - Installed `pyright` LSP server tool: `sudo npm install -g pyright`
 - Installed [rust-analyzer](https://rust-analyzer.github.io/manual.html#rust-analyzer-language-server-binary) LSP server tool
-- You can find all configuration information in `init.vim` file. If you want to use it - copy it to `~/.config/nvim/` directory
+- You can find all configuration information in `init.vim` file. If you want to use it - copy it to `~/.config/nvim/` directory, open `nvim` and run `:PlugInstall` command
 
 Full guide for Rust part of configuration is also [here](https://sharksforarms.dev/posts/neovim-rust/).
 
