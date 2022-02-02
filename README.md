@@ -27,3 +27,6 @@ Full guide for Rust part of configuration is also [here](https://sharksforarms.d
   - Rename the following files: `Package Control.sublime-settings` to `'Package Control.sublime-settings'` and `Package Control.user-ca-bundle` to `'Package Control.user-ca-bundle'`
   - Restart Sublime Text several times in order for Package Control to be able to install all packages (it might not work after the first restart)  
   __Note__ that the most important file to sync all packages is `'Package Control.sublime-settings'`. The others are the settings for the packages listed in this file and are not essential (but useful)
+
+### Appearance
+- Relax Plasma and it's add-ons from [here](https://store.kde.org/p/1687619/)
