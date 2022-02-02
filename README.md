@@ -29,4 +29,12 @@ Full guide for Rust part of configuration is also [here](https://sharksforarms.d
   __Note__ that the most important file to sync all packages is `'Package Control.sublime-settings'`. The others are the settings for the packages listed in this file and are not essential (but useful)
 
 ### Appearance
-- Relax Plasma and it's add-ons from [here](https://store.kde.org/p/1687619/)
+- `Relax` add-ons from [here](https://store.kde.org/p/1687619/). Can be installed from _files_ (tar.gz) or directly from the _internet_ via System Settings
+  - Relax Global
+  - Relax-Dark-Icons
+  - Relax-Plasma Theme
+  - Dark Plasma Color Scheme (Relax-Dark-Color)
+  - SDDM Login Theme (Relax-SDDM)
+  - Plasma Splashscreen (Relax-Splash)
+  - Konsole Color Scheme (Relax-Konsole)
+  - Dark GTK Theme (Relax-GTK)
