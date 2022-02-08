@@ -5,11 +5,14 @@
 	],
 	"installed_packages":
 	[
+		"Ethereum",
+		"EthereumSoliditySnippets",
 		"gruvbox",
 		"LSP",
 		"LSP-file-watcher-chokidar",
 		"LSP-rust-analyzer",
 		"NeoVintageous",
 		"Package Control",
+		"TypeScript Syntax",
 	],
 }
