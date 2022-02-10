@@ -30,7 +30,7 @@ Full guide for Rust part of configuration is also [here](https://sharksforarms.d
 
 ### Appearance
 - `Relax` add-ons from [here](https://store.kde.org/p/1687619/). Can be installed from _files_ (tar.gz) or directly from the _internet_ via System Settings
-  - Relax Global
+  - Relax Global (contains _everything_ else below)
   - Relax-Dark-Icons
   - Relax-Plasma Theme
   - Dark Plasma Color Scheme (Relax-Dark-Color)
