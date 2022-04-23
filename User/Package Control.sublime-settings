@@ -13,6 +13,7 @@
 		"LSP-rust-analyzer",
 		"NeoVintageous",
 		"Package Control",
+		"TOML",
 		"TypeScript Syntax",
 	],
 }
