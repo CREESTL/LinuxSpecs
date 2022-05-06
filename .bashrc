@@ -4,7 +4,8 @@ export OSH=/home/creestl/.oh-my-bash
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
 # OSH_THEME="zork"
-OSH_THEME="powerline"
+# OSH_THEME="powerline"
+OSH_THEME="purity"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -105,3 +106,7 @@ alias sleep="systemctl suspend"
 alias sublime="subl"
 
 
+# Run screenfetch on bootup
+if [ -f /usr/bin/screenfetch ]; then screenfetch; fi 
+# alias for screenfetch
+alias sf="screenfetch"
