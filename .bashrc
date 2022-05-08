@@ -110,3 +110,6 @@ alias sublime="subl"
 if [ -f /usr/bin/screenfetch ]; then screenfetch; fi 
 # alias for screenfetch
 alias sf="screenfetch"
+
+# Alias for `exa`
+alias l="exa --long --header --accessed --modified --created --classify --all"
