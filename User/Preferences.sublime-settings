@@ -1,5 +1,5 @@
 {
-	"color_scheme": "gruvbox (Dark) (Medium).sublime-color-scheme",
+	"color_scheme": "gruvbox (Dark) (Hard).sublime-color-scheme",
 	"theme": "gruvbox.sublime-theme",
 	"ignored_packages":
 	[
@@ -12,9 +12,7 @@
 	"neovintageous_build_version": 11100,
 	"font_size": 11,
 	"remember_full_screen": true,
-	"expand_sidebar_on_startup": true,
-	"remember_workspace": false,
-	"hot_exit": false,
-	"remember_open_files": false,
+	"hot_exit": "disabled",
+
 
 }
