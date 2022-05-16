@@ -27,6 +27,9 @@ Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'ayu-theme/ayu-vim'
 Plug 'arcticicestudio/nord-vim'
 
+" Solidity Syntax Highlighing
+Plug 'thesis/vim-solidity'
+
 " NERDTree
 Plug 'scrooloose/nerdtree'
 
