@@ -33,6 +33,10 @@ Plug 'thesis/vim-solidity'
 " CtrlP
 Plug 'kien/ctrlp.vim'
 
+" Status Bar
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 " NERDTree
 Plug 'scrooloose/nerdtree'
 
