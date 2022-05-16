@@ -30,6 +30,9 @@ Plug 'arcticicestudio/nord-vim'
 " Solidity Syntax Highlighing
 Plug 'thesis/vim-solidity'
 
+" CtrlP
+Plug 'kien/ctrlp.vim'
+
 " NERDTree
 Plug 'scrooloose/nerdtree'
 
