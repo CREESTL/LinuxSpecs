@@ -113,3 +113,8 @@ alias sf="screenfetch"
 
 # Alias for `exa`
 alias l="exa --long --header --accessed --modified --created --classify --all"
+
+bind "TAB:menu-complete"
+bind "set show-all-if-ambiguous on"
+bind "set completion-ignore-case on"
+bind "set menu-complete-display-prefix on"
