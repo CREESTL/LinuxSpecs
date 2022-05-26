@@ -1,10 +1,9 @@
 {
-	"color_scheme": "gruvbox (Dark) (Hard).sublime-color-scheme",
+	"color_scheme": "gruvbox (Dark) (Hard) NDC.sublime-color-scheme",
 	"theme": "gruvbox.sublime-theme",
 	"ignored_packages":
 	[
 		"ActionScript",
-		"NeoVintageous",
 		"Six",
 		"Vintage",
 		"Vintageous",
