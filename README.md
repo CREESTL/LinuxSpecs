@@ -13,6 +13,9 @@ Full guide for Rust part of configuration is also [here](https://sharksforarms.d
 
 ### Specs for Bash
 - Installed [OhMyBash](https://ohmybash.nntoan.com/) plugin manager
+- Installed [exa](https://github.com/ogham/exa) replacement for `ls`
+- Installed [ScreenFetch](https://github.com/KittyKatt/screenFetch) to see PC info in terminal
+- Installed [nala](https://github.com/volitank/nala) wrapper for `apt`
 - You can find all configuration information in `.bashrc` file. If you want to use it - copy it to `~/` directory
 
 ### Specs for Git
