@@ -114,7 +114,11 @@ alias sf="screenfetch"
 # Alias for `exa`
 alias l="exa --long --header --accessed --modified --created --classify --all"
 
+# Use tabs to cycle through options in terminal
 bind "TAB:menu-complete"
 bind "set show-all-if-ambiguous on"
 bind "set completion-ignore-case on"
 bind "set menu-complete-display-prefix on"
+
+# Alias for `nala`
+alias apt="nala"
