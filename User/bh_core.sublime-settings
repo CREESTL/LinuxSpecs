@@ -1,0 +1,13 @@
+{
+    "bracket_styles": {
+        "default": {
+            "icon": "dot",
+            // Support the old convention of `brackethighlighter.default`
+            // for themes that already provide something.
+            // As this has always been the only one we've provided
+            // by default, all the others will use region-ish colors.
+            "color": "region.yellowish brackethighlighter.default",
+            "style": "solid"
+        },
+    }
+}

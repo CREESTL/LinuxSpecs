@@ -4,6 +4,7 @@
 	"ignored_packages":
 	[
 		"ActionScript",
+		"LSP-rust-analyzer",
 		"NeoVintageous",
 		"Six",
 		"Vintage",
