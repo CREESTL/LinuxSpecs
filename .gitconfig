@@ -5,8 +5,9 @@
 	spellcheck = false
 [alias]
   tree = log --all --decorate --graph --stat
-	adog = log --all --decorate --oneline --graph
-
+	last = tree -1 HEAD	
+[core]
+	editor = nvim
 
 # Enforce using SSH instead of HTTP every time
 # (uncomment when needed)
@@ -16,7 +17,4 @@
   #insteadOf = https://gitlab.com/
 #[url "ssh://git@bitbucket.org/"]
   #insteadOf = https://bitbucket.org/
-[core]
-	editor = nvim
-[init]
-	defaultBranch = master
+
