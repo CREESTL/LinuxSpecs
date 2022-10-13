@@ -1,5 +1,5 @@
 {
-	"color_scheme": "gruvbox (Dark) (Hard) NDC.sublime-color-scheme",
+	"color_scheme": "Packages/Theme - Asphalt/Asphalt.tmTheme",
 	"theme": "gruvbox.sublime-theme",
 	"ignored_packages":
 	[
@@ -16,4 +16,6 @@
 	"hot_exit": "disabled",
 
 
+	"dark_theme": "GitHub Dimmed.sublime-theme",
+	"light_theme": "GitHub Dimmed.sublime-theme",
 }

@@ -5,7 +5,6 @@
 	],
 	"installed_packages":
 	[
-		"BracketHighlighter",
 		"Ethereum",
 		"EthereumSoliditySnippets",
 		"GitHub Theme",
@@ -14,11 +13,14 @@
 		"LSP-file-watcher-chokidar",
 		"LSP-rust-analyzer",
 		"NeoVintageous",
+		"Nord",
 		"Package Control",
 		"SideBarEnhancements",
 		"SublimeLinter",
 		"SublimeLinter-annotations",
 		"SyncedSideBar",
+		"Theme - Asphalt",
+		"Theme - Centurion",
 		"ToggleNeoVintageous",
 		"TOML",
 		"TypeScript Syntax",
