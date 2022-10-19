@@ -120,3 +120,7 @@ bind "set show-all-if-ambiguous on"
 bind "set completion-ignore-case on"
 bind "set menu-complete-display-prefix on"
 
+# Default language is English
+alias git='LANG=en_US git'
+
+. "$HOME/.cargo/env"
