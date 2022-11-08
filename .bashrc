@@ -105,10 +105,7 @@ alias boom="shutdown now"
 alias sleep="systemctl suspend"
 alias sublime="subl"
 
-
-# Run screenfetch on bootup
-if [ -f /usr/bin/screenfetch ]; then screenfetch; fi 
-# alias for screenfetch
+# Alias for screenfetch
 alias sf="screenfetch"
 
 # Alias for `exa`
@@ -120,3 +117,5 @@ bind "set show-all-if-ambiguous on"
 bind "set completion-ignore-case on"
 bind "set menu-complete-display-prefix on"
 
+
+export PATH="$PATH:/home/creestl/.foundry/bin"
