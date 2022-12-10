@@ -1,0 +1,7 @@
+" Type :help nv for help.
+
+set relativenumber = true
+
+set hlsearch = true
+
+set autoindent = true
