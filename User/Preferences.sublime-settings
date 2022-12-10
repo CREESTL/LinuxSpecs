@@ -8,7 +8,7 @@
 		"Six",
 		"Vintage",
 		"Vintageous",
-	],
+                   ],
 	"neovintageous_build_version": 12700,
 	"font_size": 11,
 	"remember_full_screen": true,
@@ -100,7 +100,7 @@
     // Plugin
     //
     // A port of https://github.com/justinmk/vim-sneak.
-    "vintageous_enable_sneak": false,
+    "vintageous_enable_sneak": true,
 
     // Plugin
     //
@@ -132,6 +132,9 @@
     //     squiggly_underline
     //     stippled_underline
     "highlightedyank_style": "outline",
+
+    // `jk` combination maps as <ESC>
+    "vintageous_i_escape_jk": true,
 
     // When quitting the last window exit ST.
     "vintageous_exit_when_quiting_last_window": true,
@@ -193,5 +196,5 @@
     "vintageous_use_super_keys": false,
 
     // Propagate copy actions to the system clipboard.
-    "vintageous_use_sys_clipboard": true
-} 
+    "vintageous_use_sys_clipboard": true,
+}
