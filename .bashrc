@@ -120,3 +120,6 @@ bind "set menu-complete-display-prefix on"
 # Default language is English
 alias git='LANG=en_US git'
 
+# Turn on/off the VPN
+alias vup='sudo wg-quick up CREESTL'
+alias vdown='sudo wg-quick down CREESTL'
