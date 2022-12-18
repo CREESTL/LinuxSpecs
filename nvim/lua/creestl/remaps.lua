@@ -43,3 +43,7 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- Remap Escape
 vim.keymap.set({"v", "i"}, "jk", "<Esc>")
+
+-- Put empty lines above and below the current line
+vim.keymap.set("n", "[<space>", "<cmd>:pu! _<CR>:']+1<CR>")
+vim.keymap.set("n", "]<space>", "<cmd>:pu _<CR>:']-1<CR>")
