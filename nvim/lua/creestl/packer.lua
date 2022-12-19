@@ -53,20 +53,7 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
 	}
 	-- Gruvbox theme
-	use {
-		'eddyekofo94/gruvbox-flat.nvim',
-		config = function()
-			vim.g.gruvbox_italic_keywords = true
-			vim.g.gruvbox_italic_functions = false
-			vim.g.gruvbox_sidebars = { "qf", "vista_kind", "terminal", "packer" }
-			-- Change the "hint" color to the "orange" color, and make the "error" color bright red
-			vim.g.gruvbox_colors = { hint = "orange", error = "#ff0000" }
-			-- Change the TabLineSel highlight group (used by barbar.nvim) to the "orange" color
-			vim.g.gruvbox_theme = { TabLineSel = { bg = "orange" } }
-			vim.g.gruvbox_flat_style = "dark"
-			vim.cmd('colorscheme gruvbox-flat')
-		end
-	}
+    use { 'ellisonleao/gruvbox.nvim' }
 
 	-- Treesitter for parsing and highlighting
 	use ({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
