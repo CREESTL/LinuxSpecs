@@ -58,7 +58,7 @@ return require('packer').startup(function(use)
 		config = function()
 			vim.g.gruvbox_italic_keywords = true
 			vim.g.gruvbox_italic_functions = false
-			vim.g.gruvbox_sidebars = { "packer" }
+			vim.g.gruvbox_sidebars = { "qf", "vista_kind", "terminal", "packer" }
 			-- Change the "hint" color to the "orange" color, and make the "error" color bright red
 			vim.g.gruvbox_colors = { hint = "orange", error = "#ff0000" }
 			-- Change the TabLineSel highlight group (used by barbar.nvim) to the "orange" color
@@ -70,6 +70,9 @@ return require('packer').startup(function(use)
 
 	-- Treesitter for parsing and highlighting
 	use ({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
+
+    -- Color highlighter
+    use ('norcalli/nvim-colorizer.lua')
 
 	-- Harpoon to quickly switch between files
 	use ('theprimeagen/harpoon')
