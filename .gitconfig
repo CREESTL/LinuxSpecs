@@ -4,8 +4,8 @@
 [cola]
 	spellcheck = false
 [alias]
-  tree = log --all --decorate --graph --stat
-	last = tree -1 HEAD	
+  tree = log --all --decorate --graph
+	last = tree -1 HEAD
 [core]
 	editor = nvim
 
