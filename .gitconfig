@@ -4,8 +4,14 @@
 [cola]
 	spellcheck = false
 [alias]
-  tree = log --all --decorate --graph
-	last = tree -1 HEAD
+    tree = log --all --decorate --graph
+    last = tree -1 HEAD
+    # See diff in main prokect and in all submodules at the same time
+	sdiff = !git diff && git submodule foreach 'git diff'
+    # Update all submodules
+    supdate = submodule update --remote --merge
+
+
 [core]
 	editor = nvim
 
