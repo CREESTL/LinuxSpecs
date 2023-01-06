@@ -25,4 +25,4 @@
 [submodule]
 	recurse = true
 [push]
-	recurseSubmodules = check
+	recurseSubmodules = on-demand
