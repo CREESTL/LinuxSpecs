@@ -24,3 +24,5 @@
 	submodule = log
 [submodule]
 	recurse = true
+[push]
+	recurseSubmodules = check
