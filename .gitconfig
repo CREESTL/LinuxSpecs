@@ -22,3 +22,5 @@
 	submodulessummary = 1
 [diff]
 	submodule = log
+[submodule]
+	recurse = true
