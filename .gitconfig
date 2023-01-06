@@ -18,3 +18,7 @@
 #[url "ssh://git@bitbucket.org/"]
   #insteadOf = https://bitbucket.org/
 
+[status]
+	submodulessummary = 1
+[diff]
+	submodule = log
