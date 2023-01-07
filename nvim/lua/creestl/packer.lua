@@ -55,6 +55,9 @@ return require('packer').startup(function(use)
 	-- Gruvbox theme
     use { 'ellisonleao/gruvbox.nvim' }
 
+    -- Nightfly theme
+    use  { 'bluz71/vim-nightfly-colors' }
+
 	-- Treesitter for parsing and highlighting
 	use ({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
 
