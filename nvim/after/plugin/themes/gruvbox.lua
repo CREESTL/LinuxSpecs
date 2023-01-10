@@ -12,7 +12,7 @@ require("gruvbox").setup({
   contrast = "hard", -- can be "hard", "soft" or empty string
   palette_overrides = {},
   overrides = {},
-  dim_inactive = true,
+  dim_inactive = false,
   transparent_mode = false,
 })
 
@@ -20,4 +20,4 @@ require("gruvbox").setup({
 vim.o.background = "dark"
 
 -- Uncomment this line to use the theme
-vim.cmd("colorscheme gruvbox")
+-- vim.cmd("colorscheme gruvbox")
