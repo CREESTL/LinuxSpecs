@@ -64,6 +64,9 @@ return require('packer').startup(function(use)
     as = 'rose-pine'
     })
 
+    -- Tokyo Night theme
+    use 'folke/tokyonight.nvim'
+
 	-- Treesitter for parsing and highlighting
 	use ({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
 
