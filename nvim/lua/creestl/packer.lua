@@ -65,10 +65,12 @@ return require('packer').startup(function(use)
     })
 
     -- Tokyo Night theme
-    use 'folke/tokyonight.nvim'
+    use ('folke/tokyonight.nvim')
 
 	-- Treesitter for parsing and highlighting
 	use ({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
+    -- Playground to see which tokens it can parse
+    use ('nvim-treesitter/playground')
 
     -- Color highlighter
     use ('norcalli/nvim-colorizer.lua')
