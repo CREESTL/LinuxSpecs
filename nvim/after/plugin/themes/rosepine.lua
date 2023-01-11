@@ -43,35 +43,58 @@ require('rose-pine').setup({
 		-- headings = 'subtle'
 	},
 
-    -- THESE GROUPS ARE FOR SOLIDITY SPECIFICALLY
-    -- COMMENT THEM TO USE DEFAULT COLORS FOR OTHER LAGUAGES
 
 	highlight_groups = {
 		ColorColumn = { bg = 'rose' },
-        ['@constructor'] = { fg = 'gold', style = "bold" },
-        ['@keyword'] = { fg = 'gold', style = "bold" },
-
-        ['@variable'] = { fg = 'text' },
-        ['@number'] = { fg = 'foam' },
-        ['@string'] = { fg = 'iris' },
-        ['@field'] = { fg = 'pine' },
-        ['@constant.builtin'] = { fg = 'love', style = 'italic' },
-
-        ['@operator'] = { fg = 'rose' },
-        ['@repeat'] = { fg = 'rose' },
-        ['@conditional'] = { fg = 'rose' },
-
-        ['@type'] = { fg = 'iris' },
-        ['@type.qualifier'] = { fg = 'love', style = "italic" },
-
-        ['@storageclass'] = { fg = 'iris', style = "italic" },
-
-        ['@preproc'] = { fg = 'foam' },
+ 	},
 
 
-        ['@punctuation.bracket'] = { fg = 'foam' },
-        ['@punctuation.delimiter'] = { fg = 'foam' },
-	}
+    -- CUSTOM COLORS FOR SOLIDITY FILES --
+
+    -- base: #191724
+    -- surface: #1f1d2e
+    -- overlay: #26233a
+    -- muted: #6e6a86
+    -- subtle: #908caa
+    -- text: #e0def4
+    -- love: #eb6f92
+    -- gold: #f6c177
+    -- rose: #ebbcba
+    -- pine: #31748f
+    -- foam: #9ccfd8
+    -- iris: #c4a7e7
+    -- highlight_low: #21202e
+    -- highlight_med: #403d52
+    -- highlight_high: #524f67
+
+    vim.api.nvim_create_autocmd("FileType", {
+        pattern = {"solidity"},
+        callback = function()
+            vim.api.nvim_set_hl(0, "@constructor", { fg = "#f6c177", bold=true})
+            vim.api.nvim_set_hl(0, "@keyword", { fg = "#f6c177", bold=true})
+
+            vim.api.nvim_set_hl(0, "@variable", { fg = "#e0def4" })
+            vim.api.nvim_set_hl(0, "@number", { fg = "#9ccfd8" })
+            vim.api.nvim_set_hl(0, "@string", { fg = "#c4a7e7" })
+            vim.api.nvim_set_hl(0, "@field", { fg = "#31748f" })
+            vim.api.nvim_set_hl(0, "@constant.builtin", { fg = "#eb6f92", italic=true })
+
+            vim.api.nvim_set_hl(0, "@operator", { fg = "#ebbcba" })
+            vim.api.nvim_set_hl(0, "@repeat", { fg = "#ebbcba" })
+            vim.api.nvim_set_hl(0, "@conditional", { fg = "#ebbcba" })
+
+            vim.api.nvim_set_hl(0, "@type", { fg = "#c4a7e7" })
+            vim.api.nvim_set_hl(0, "@type.qualifier", { fg = "#eb6f92", italic=true })
+
+            vim.api.nvim_set_hl(0, "@storageclass", { fg = "#c4a7e7", italic=true })
+
+            vim.api.nvim_set_hl(0, "@preproc", { fg = "#9ccfd8" })
+
+            vim.api.nvim_set_hl(0, "@punctuation.bracket", { fg = "#9ccfd8" })
+            vim.api.nvim_set_hl(0, "@punctuation.delimiter", { fg = "#9ccfd8" })
+
+        end,
+    })
 })
 
 -- set colorscheme after options
