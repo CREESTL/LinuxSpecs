@@ -75,13 +75,16 @@ require('rose-pine').setup({
 
             vim.api.nvim_set_hl(0, "@variable", { fg = "#e0def4" })
             vim.api.nvim_set_hl(0, "@number", { fg = "#9ccfd8" })
-            vim.api.nvim_set_hl(0, "@string", { fg = "#c4a7e7" })
-            vim.api.nvim_set_hl(0, "@field", { fg = "#31748f" })
-            vim.api.nvim_set_hl(0, "@constant.builtin", { fg = "#eb6f92", italic=true })
+            vim.api.nvim_set_hl(0, "@string", { fg = "#f6c177", italic=true})
+            vim.api.nvim_set_hl(0, "@field", { fg = "#ebbcba" })
+            vim.api.nvim_set_hl(0, "@constant.builtin", { fg = "#9ccfd8", italic=true })
 
-            vim.api.nvim_set_hl(0, "@operator", { fg = "#ebbcba" })
-            vim.api.nvim_set_hl(0, "@repeat", { fg = "#ebbcba" })
-            vim.api.nvim_set_hl(0, "@conditional", { fg = "#ebbcba" })
+            vim.api.nvim_set_hl(0, "@include", { fg = "#31748f", italic=true })
+
+            vim.api.nvim_set_hl(0, "@repeat", { fg = "#f6c177" })
+            vim.api.nvim_set_hl(0, "@conditional", { fg = "#f6c177" })
+            vim.api.nvim_set_hl(0, "@operator", { fg = "#eb6f92" })
+            vim.api.nvim_set_hl(0, "@keyword.operator", { fg = "#9ccfd8" })
 
             vim.api.nvim_set_hl(0, "@type", { fg = "#c4a7e7" })
             vim.api.nvim_set_hl(0, "@type.qualifier", { fg = "#eb6f92", italic=true })
@@ -91,7 +94,7 @@ require('rose-pine').setup({
             vim.api.nvim_set_hl(0, "@preproc", { fg = "#9ccfd8" })
 
             vim.api.nvim_set_hl(0, "@punctuation.bracket", { fg = "#9ccfd8" })
-            vim.api.nvim_set_hl(0, "@punctuation.delimiter", { fg = "#9ccfd8" })
+            vim.api.nvim_set_hl(0, "@punctuation.delimiter", { fg = "#908caa" })
 
         end,
     })
