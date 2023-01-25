@@ -1,104 +1,138 @@
+; ===================================================
+
+; Pragma
+
+(pragma_directive) @attribute
+
+; ===================================================
+
+; Comments
 
 (comment) @comment
-;; Handles natspec comments
 ((comment) @preproc
  (#match? @preproc "^/// .*"))
 
-; Pragma
-(pragma_directive) @attribute
+; ===================================================
 
+; Contract Declaration
+
+(inheritance_specifier ancestor: (identifier) @ancestor)
+(contract_declaration name: (identifier) @type)
+; Handles ContractA, ContractB in function foo() override(ContractA, contractB) {}
+(override_specifier (identifier) @type)
+
+; ===================================================
 
 ; Literals
+
 [
  (string)
  (hex_string_literal)
  (unicode_string_literal)
- (yul_string_literal)
 ] @string
+
 [
  (number_literal)
- (yul_decimal_number)
- (yul_hex_number)
 ] @number
+
 [
  (true)
  (false)
 ] @constant.builtin
 
 
-; Type
+; ===================================================
+
+; Types
+
 (type_name (identifier) @type)
-(type_name "mapping" @type)
+(type_name "mapping" @type.mapping)
+
 (primitive_type) @type
-(contract_declaration name: (identifier) @type)
-(struct_declaration
-  struct_name: (identifier) @type
-  )
-(struct_member name: (identifier) @field)
-(enum_declaration enum_type_name: (identifier) @type)
-(emit_statement . (identifier) @type)
-; Handles ContractA, ContractB in function foo() override(ContractA, contractB) {}
-(override_specifier (identifier) @type)
-; Ensures that delimiters in mapping( ... => .. ) are not colored like types
-(type_name
-  "(" @punctuation.bracket
-  "=>" @punctuation.delimiter
-  ")" @punctuation.bracket)
 
+(meta_type_expression "type" @keyword)
 
-; Functions and parameters
+; ===================================================
 
+; Functions, methods and parameters
+
+; Function definitions: `function addSalary()`
 (function_definition
-  function_name:  (identifier) @function)
-(modifier_definition
-  name:  (identifier) @function)
-(yul_evm_builtin) @function.builtin
+ function_name:  (identifier) @function.definition)
 
-; Use contructor coloring for special functions
-(constructor_definition "constructor" @constructor)
-(fallback_receive_definition "receive" @constructor)
-(fallback_receive_definition "fallback" @constructor)
-
-(modifier_invocation (identifier) @function)
-
-; Handles expressions like structVariable.g();
-(call_expression . (member_expression (property_identifier) @method.call))
-
-; Handles expressions like g();
+; Raw function calls like `getTokens()`
 (call_expression . (identifier) @function.call)
-(function_definition
- function_name: (identifier) @function)
+; Field calls like `pool.*lockers*.length()`
+; All fields between object and the last field are colored as fields
+(member_expression  (property_identifier) @field)
+; Method calls like `pool.lockers.*length()*`
+; The last field is colored as method call
+(call_expression . (member_expression  (property_identifier) @method.call))
+
+; Calls like `msg.sender.call{*value*: share}("")`;
+(struct_expression ((identifier) @field . ":"))
+
+; Parameters
+(parameter name: (identifier) @parameter)
+
+; Special functions
+
+(constructor_definition "constructor" @function.special)
+(fallback_receive_definition "receive" @function.special)
+(fallback_receive_definition "fallback" @function.special)
+
+
+; ===================================================
+
+; Structs
 
 ; Handles the field in struct literals like MyStruct({MyField: MyVar * 2})
 (call_expression (identifier) @field . ":")
 
-; Function parameters
-(event_paramater name: (identifier) @parameter)
-(parameter name: (identifier) @parameter)
+(struct_declaration
+  struct_name: (identifier) @type
+  )
+(struct_member name: (identifier) @field)
 
-; Yul functions
-(yul_function_call function: (yul_identifier) @function.call)
+; ===================================================
 
-; Yul function parameters
-(yul_function_definition . (yul_identifier) @function (yul_identifier) @parameter)
+; Enums
 
-(meta_type_expression "type" @keyword)
-
-(member_expression (property_identifier) @field)
-(property_identifier) @field
-(struct_expression ((identifier) @field . ":"))
 (enum_value) @constant
 
-(augmented_assignment_expression "+=" @operator)
-(augmented_assignment_expression "-=" @operator)
+(enum_declaration enum_type_name: (identifier) @type)
 
+; ===================================================
+
+; Modifiers
+
+(modifier_definition
+  name:  (identifier) @modifier.definition)
+(modifier_invocation . (identifier) @modifier.invocation)
+
+
+; ===================================================
+
+; Events
+
+(emit_statement . (identifier) @emit)
+
+(event_paramater "indexed" @type)
+(event_paramater name: (identifier) @parameter)
+
+; ===================================================
 
 ; Keywords
+
 [
+ "pragma"
  "contract"
  "interface"
  "library"
  "is"
+ "function"
+ "return"
+ "returns"
  "struct"
  "enum"
  "event"
@@ -111,7 +145,6 @@
 ] @keyword
 
 [
-
  "public"
  "internal"
  "private"
@@ -149,21 +182,13 @@
  "catch"
 ] @exception
 
-[
- "return"
- "returns"
- (yul_leave)
-] @keyword.return
-
-"function" @keyword.function
-
-"pragma" @preproc
 
 ["import" "using"] @include
 (import_directive "as" @include)
 (import_directive "from" @include)
 
-(event_paramater "indexed" @keyword)
+
+; ===================================================
 
 ; Punctuation
 
@@ -182,6 +207,13 @@
   ","
 ] @punctuation.delimiter
 
+; Ensures that delimiters in mapping( ... => .. ) are not colored like types
+(type_name
+  "(" @punctuation.bracket
+  "=>" @punctuation.delimiter
+  ")" @punctuation.bracket)
+
+; ===================================================
 
 ; Operators
 
@@ -216,10 +248,17 @@
   "--"
 ] @operator
 
+
+(augmented_assignment_expression "+=" @operator)
+(augmented_assignment_expression "-=" @operator)
+
+
+; ===================================================
+
+; Native constructors and destructors
+
 [
   "delete"
   "new"
 ] @keyword.operator
 
-(identifier) @variable
-(yul_identifier) @variable
