@@ -1,5 +1,16 @@
-require("creestl.remaps")
 require("creestl.sets")
+require("creestl.remaps")
+require("creestl.plugins.appearance.colorizer")
+require("creestl.plugins.appearance.lualine")
+require("creestl.plugins.appearance.treesitter")
+require("creestl.plugins.git.fugitive")
+require("creestl.plugins.lsp.lsp")
+require("creestl.plugins.navigation.harpoon")
+require("creestl.plugins.navigation.telescope")
+require("creestl.themes.gruvbox")
+require("creestl.themes.nightfly")
+require("creestl.themes.rosepine")
+require("creestl.themes.tokyonight")
 
 local augroup = vim.api.nvim_create_augroup
 local creestlGroup = augroup('creestl', {})
