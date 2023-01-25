@@ -109,11 +109,10 @@ _G.packer_plugins = {
     path = "/home/creestl/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
-  ["gruvbox-flat.nvim"] = {
-    config = { "\27LJ\2\2Ï\2\0\0\3\0\15\0\0276\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0005\1\4\0=\1\3\0006\0\0\0009\0\1\0005\1\6\0=\1\5\0006\0\0\0009\0\1\0005\1\t\0005\2\b\0=\2\n\1=\1\a\0006\0\0\0009\0\1\0'\1\f\0=\1\v\0006\0\0\0009\0\r\0'\1\14\0B\0\2\1K\0\1\0\29colorscheme gruvbox-flat\bcmd\tdark\23gruvbox_flat_style\15TabLineSel\1\0\0\1\0\1\abg\vorange\18gruvbox_theme\1\0\2\nerror\f#ff0000\thint\vorange\19gruvbox_colors\1\5\0\0\aqf\15vista_kind\rterminal\vpacker\21gruvbox_sidebars\29gruvbox_italic_functions\6g\bvim\0" },
+  ["gruvbox.nvim"] = {
     loaded = true,
-    path = "/home/creestl/.local/share/nvim/site/pack/packer/start/gruvbox-flat.nvim",
-    url = "https://github.com/eddyekofo94/gruvbox-flat.nvim"
+    path = "/home/creestl/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
+    url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
   harpoon = {
     loaded = true,
@@ -145,10 +144,21 @@ _G.packer_plugins = {
     path = "/home/creestl/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["nvim-autopairs"] = {
+    config = { "\27LJ\2\2@\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
+    loaded = true,
+    path = "/home/creestl/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/creestl/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/home/creestl/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -177,28 +187,48 @@ _G.packer_plugins = {
     path = "/home/creestl/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  playground = {
+    loaded = true,
+    path = "/home/creestl/.local/share/nvim/site/pack/packer/start/playground",
+    url = "https://github.com/nvim-treesitter/playground"
+  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/home/creestl/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["rose-pine"] = {
+    loaded = true,
+    path = "/home/creestl/.local/share/nvim/site/pack/packer/start/rose-pine",
+    url = "https://github.com/rose-pine/neovim"
   },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/creestl/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/home/creestl/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/creestl/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-nightfly-colors"] = {
+    loaded = true,
+    path = "/home/creestl/.local/share/nvim/site/pack/packer/start/vim-nightfly-colors",
+    url = "https://github.com/bluz71/vim-nightfly-colors"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: gruvbox-flat.nvim
-time([[Config for gruvbox-flat.nvim]], true)
-try_loadstring("\27LJ\2\2Ï\2\0\0\3\0\15\0\0276\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0005\1\4\0=\1\3\0006\0\0\0009\0\1\0005\1\6\0=\1\5\0006\0\0\0009\0\1\0005\1\t\0005\2\b\0=\2\n\1=\1\a\0006\0\0\0009\0\1\0'\1\f\0=\1\v\0006\0\0\0009\0\r\0'\1\14\0B\0\2\1K\0\1\0\29colorscheme gruvbox-flat\bcmd\tdark\23gruvbox_flat_style\15TabLineSel\1\0\0\1\0\1\abg\vorange\18gruvbox_theme\1\0\2\nerror\f#ff0000\thint\vorange\19gruvbox_colors\1\5\0\0\aqf\15vista_kind\rterminal\vpacker\21gruvbox_sidebars\29gruvbox_italic_functions\6g\bvim\0", "config", "gruvbox-flat.nvim")
-time([[Config for gruvbox-flat.nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+try_loadstring("\27LJ\2\2@\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
 -- Config for: nvim-surround
 time([[Config for nvim-surround]], true)
 try_loadstring("\27LJ\2\2?\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
