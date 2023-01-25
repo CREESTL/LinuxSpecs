@@ -39,3 +39,8 @@ require "nvim-treesitter.configs".setup {
     },
   }
 }
+
+-- Toggle Treesitter
+vim.keymap.set("n", "tst", "<cmd>TSPlaygroundToggle<CR>")
+-- Show node under cursor
+vim.keymap.set("n", "tsu", "<cmd>TSNodeUnderCursor<CR>")
