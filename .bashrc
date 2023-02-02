@@ -108,6 +108,9 @@ alias sublime="subl"
 # Alias for screenfetch
 alias sf="screenfetch"
 
+# Alias for yandex browser
+alias yandex="yandex-browser"
+
 # Alias for `exa`
 alias l="exa --long --header --accessed --modified --created --classify --all"
 
