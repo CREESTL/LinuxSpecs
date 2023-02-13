@@ -8,6 +8,7 @@
   - Plasma Splashscreen (Relax-Splash)
   - Konsole Color Scheme (Relax-Konsole)
   - Dark GTK Theme (Relax-GTK)
+- [KDE Sunset Wallpaper](https://github.com/Oman395/kde-sunset-wallpaper)
 
 ### Specs for Bash
 - Installed [OhMyBash](https://ohmybash.nntoan.com/) plugin manager
