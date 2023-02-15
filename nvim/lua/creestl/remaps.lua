@@ -48,3 +48,7 @@ vim.keymap.set({"v", "i"}, "jk", "<Esc>")
 -- Put empty lines above and below the current line
 vim.keymap.set("n", "[<space>", "<cmd>:pu! _<CR>:']+1<CR>")
 vim.keymap.set("n", "]<space>", "<cmd>:pu _<CR>:']-1<CR>")
+
+-- Scroll a bit more smoothly
+vim.keymap.set("n", "<ScrollWheelUp>", "<C-Y>")
+vim.keymap.set("n", "<ScrollWheelDown>", "<C-E>")
