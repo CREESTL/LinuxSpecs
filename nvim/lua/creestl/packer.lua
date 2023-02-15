@@ -132,6 +132,9 @@ return require('packer').startup(function(use)
     -- Smooth scrolling
     use ('karb94/neoscroll.nvim')
 
+    -- Zen mode
+    use ("folke/zen-mode.nvim")
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
