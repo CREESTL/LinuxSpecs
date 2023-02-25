@@ -36,16 +36,9 @@
 List of all plugins for NeoVim can also be found in `packer.lua` file. Each plugin has a short
 comment describing its functionality.
 
-### Specs for Sublime Text
-- You can find all configuration information in `User/` directory. If you want to use:
-  - Remove your `~/.config/sublime-text/Packages/User/` directory
-    - (`~/Library/Application Support/Sublime Text/Packages` on Mac)
-    - (`%APPDATA%\Sublime Text\Data\Packages` on Windows)
-  - Copy the `User` directory from this repo instead of it
-  - Rename the following files: `Package Control.sublime-settings` to `'Package Control.sublime-settings'` and `Package Control.user-ca-bundle` to `'Package Control.user-ca-bundle'`
-  - Restart Sublime Text several times in order for Package Control to be able to install all packages (it might not work after the first restart)    
+### Specs for Visual Studio Code
+I am using the `Settings Sync` official built-in feature of VS Code. [Read more](https://code.visualstudio.com/docs/editor/settings-sync) on how to use it.
 
-__Note__ that the most important file to sync all packages is `'Package Control.sublime-settings'`. The others are the settings for the packages listed in this file and are not essential (but useful)
 
 
 ### Other Stuff
