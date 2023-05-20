@@ -28,11 +28,9 @@ return require('packer').startup(function(use)
     use ('folke/tokyonight.nvim')
 
 	-- Treesitter for parsing and highlighting
-    -- Specific versions are used here because later versions are not compatible
-    -- with my queries file.
-	use ({'nvim-treesitter/nvim-treesitter', tag = 'v0.8.1', run = ':TSUpdate'})
+	use ({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
     -- Playground to see which tokens it can parse
-    use ({'nvim-treesitter/playground', commit='3421bbb'})
+    use ({'nvim-treesitter/playground'})
 
     -- Color highlighter
     use ('norcalli/nvim-colorizer.lua')
