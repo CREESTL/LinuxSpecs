@@ -1,12 +1,8 @@
 vim.g.mapleader = " "
 
--- Exit file and go back to navigation
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-
 -- Move highlighted strings
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-
 
 -- Line below the current gets appended and the cursor stays in place
 vim.keymap.set("n", "J", "mzJ`z")
