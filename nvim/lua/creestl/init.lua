@@ -9,10 +9,13 @@ require("creestl.plugins.lsp.lsp")
 require("creestl.plugins.navigation.harpoon")
 require("creestl.plugins.navigation.telescope")
 require("creestl.plugins.navigation.smooth_scroll")
+require("creestl.plugins.navigation.nvim_tree")
+require("creestl.plugins.navigation.nvim_tree_devicons")
 require("creestl.themes.gruvbox")
 require("creestl.themes.nightfly")
 require("creestl.themes.rosepine")
 require("creestl.themes.tokyonight")
+
 
 local augroup = vim.api.nvim_create_augroup
 local creestlGroup = augroup('creestl', {})
@@ -38,7 +41,3 @@ autocmd({"BufWritePre"}, {
     command = [[%s/\s\+$//e]],
 })
 
--- Better netrw browsing experience
-vim.g.netrw_browse_split = 0
-vim.g.netrw_banner = 0
-vim.g.netrw_winsize = 25

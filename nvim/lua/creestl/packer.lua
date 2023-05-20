@@ -97,10 +97,18 @@ return require('packer').startup(function(use)
     -- Zen mode
     use ("folke/zen-mode.nvim")
 
-	-- Automatically set up your configuration after cloning packer.nvim
-	-- Put this at the end after all plugins
-	if PACKER_BOOTSTRAP then
-		require("packer").sync()
-	end
+    -- Nvim-Tree
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional
+        },
+        config = function()
+            require("nvim-tree").setup {}
+        end
+    }
+
+    -- Nvim-Tree-DevIcons
+    use ('nvim-tree/nvim-web-devicons')
 
 end)
