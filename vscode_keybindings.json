@@ -1,0 +1,19 @@
+// Note: "key" can be either ONE letter, or "ctrl+..", or "alt+..."
+//        There can't be two letters like "a+h"
+
+
+[
+    // Quit to normal mode
+    {
+        "command": "vscode-neovim.compositeEscape1",
+        "key": "j",
+        "when": "neovim.mode == insert && editorTextFocus",
+        "args": "j"
+    },
+    {
+        "command": "vscode-neovim.compositeEscape3",
+        "key": "k",
+        "when": "neovim.mode == insert && editorTextFocus",
+        "args": "k"
+    }
+]
