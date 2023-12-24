@@ -1,3 +1,6 @@
+
+-- Keymaps for plugins are set in '/plugins/<plugin>.lua/ files
+
 vim.g.mapleader = " "
 
 -- Move highlighted strings

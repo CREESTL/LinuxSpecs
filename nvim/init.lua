@@ -1,1 +1,2 @@
-require("creestl")
+require("creestl.core")
+require("creestl.lazy")
