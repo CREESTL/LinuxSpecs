@@ -1,3 +1,5 @@
+-- Installs adapters for dap
+
 return {
     "jay-babu/mason-nvim-dap.nvim",
     event = "VeryLazy",

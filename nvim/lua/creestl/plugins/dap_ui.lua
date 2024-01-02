@@ -17,5 +17,15 @@ return {
       dap.listeners.before.event_exited["dapui_config"] = function()
         dapui.close()
       end
+      -- Custom icons
+      vim.fn.sign_define(
+          "DapBreakpoint",
+          { text = "●", texthl = "", linehl = "debugBreakpoint", numhl = "debugBreakpoint" }
+      )
+      vim.fn.sign_define(
+          "DapBreakpointCondition",
+          { text = "◆", texthl = "", linehl = "debugBreakpoint", numhl = "debugBreakpoint" }
+      )
+      vim.fn.sign_define("DapStopped", { text = "▶", texthl = "", linehl = "debugPC", numhl = "debugPC" }) 
     end
-  }
+}
