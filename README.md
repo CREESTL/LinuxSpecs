@@ -7,6 +7,7 @@ My development environment is Windows 11 + WSL (Ubuntu 20.04). Here are some con
 - Open `~/.config/nvim/` directory in NeoVim
 - Run `Lazy` NeoVim command. The Lazy UI must appear
 - Press `Shift + S` to sync (install and update) all plugins
+    - Note that [dap](https://github.com/CREESTL/LinuxSpecs/blob/master/nvim/lua/creestl/plugins/dap.lua) debugger requires [codelldb](https://github.com/vadimcn/codelldb) to be installed (or linked) to `usr/bin/codelldb`
 - Quit and enter NeoVim
 
 ### Config for Bash
