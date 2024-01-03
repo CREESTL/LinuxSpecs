@@ -5,8 +5,12 @@ return {
     config = function()
         local keymap = vim.keymap
 
-        keymap.set("n", "<leader>db", "<cmd>DapToggleBreakpoint<CR>", { desc = "Toggle breakpoint" })
-        keymap.set("n", "<leader>dr", "<cmd>DapContinue<CR>", { desc = "Start or Continue execution" })
+        keymap.set("n", '<F5>', function() require('dap').continue() end, { desc = "Start or continue execution" })
+        keymap.set('n', '<F10>', function() require('dap').step_over() end, { desc = "Step over" })
+        keymap.set('n', '<F11>', function() require('dap').step_into() end, { desc = "Step into" })
+        keymap.set('n', '<F12>', function() require('dap').step_out() end, { desc = "Step out" })
+        keymap.set('n', '<Leader>b', function() require('dap').toggle_breakpoint() end, { desc = "Toggle breakpoint" })
+        keymap.set('n', '<Leader>B', function() require('dap').set_breakpoint() end, { desc = "Set breakpoint" })
 
         local dap = require("dap")
 
@@ -20,12 +24,12 @@ return {
             },
         }
 
-        -- Configuration for C debugging
         dap.configurations.c = {
             {
+                name = "Debug C",
                 type = "codelldb",
                 request = "launch",
-                program = function ()
+                program = function()
                     -- Compile and return exec name
                     local filetype = vim.bo.filetype
                     -- Full path to current .c file with extension
@@ -45,7 +49,9 @@ return {
                     end
                     return basename
                 end,
-                args = function ()
+
+                -- Args passed to the program
+                args = function()
                     local argv = {}
                     arg = vim.fn.input(string.format("Input argv (if any): "))
                     for a in string.gmatch(arg, "%S+") do
@@ -55,24 +61,11 @@ return {
                     return argv
                 end,
 
+
+                -- Change working directory for the program
                 cwd = "${workspaceFolder}",
 
-                -- Comment it not to stop at main
-                stopAtEntry = true,
-
-                MIMode = "gdb",
-                miDebuggerPath = "/usr/bin/gdb",
-                setupCommands = {
-                    {
-                        text = "-enable-pretty-printing",
-                        description = "enable pretty printing",
-                        ignoreFailures = false,
-                    },
-                },
-            },
+            }
         }
-
-        -- Configuration for CPP debugging
-        dap.configurations.cpp = dap.configurations.c
     end,
 }
