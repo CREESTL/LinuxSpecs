@@ -1,4 +1,6 @@
--- Colorscheme 
+-- Colorscheme
+
+-- #################### ROSEPINE ####################
 return {
 
     "rose-pine/neovim",
@@ -10,8 +12,8 @@ return {
             dim_nc_background = false,
             disable_background = false,
             disable_float_background = false,
-            disable_italics = true,
-            
+            disable_italics = false,
+
             groups = {
                 background = 'base',
                 panel = 'surface',
@@ -19,12 +21,12 @@ return {
                 comment = 'muted',
                 link = 'iris',
                 punctuation = 'subtle',
-                
+
                 error = 'love',
                 hint = 'iris',
                 info = 'foam',
                 warn = 'gold',
-                
+
                 git_add = 'foam',
                 git_change = 'rose',
                 git_delete = 'love',
@@ -34,7 +36,7 @@ return {
                 git_rename = 'pine',
                 git_stage = 'iris',
                 git_text = 'rose',
-                
+
                 headings = {
                     h1 = 'iris',
                     h2 = 'foam',
@@ -46,8 +48,8 @@ return {
                 -- or set all headings at once
                 -- headings = 'subtle'
             },
-            
-            
+
+
             highlight_groups = {
                 ColorColumn = { bg = 'rose' },
             },
@@ -55,31 +57,52 @@ return {
 
         vim.cmd("colorscheme rose-pine")
     end,
-
-
-	-- "ellisonleao/gruvbox.nvim",
-	-- priority = 1000,
-	-- config = function()
- --        require("gruvbox").setup({
- --            undercurl = true,
- --            underline = true,
- --            bold = true,
- --            italic = {
- --                strings = false,
- --                comments = false,
- --            },
- --            strikethrough = true,
- --            invert_selection = false,
- --            invert_signs = false,
- --            invert_tabline = false,
- --            invert_intend_guides = false,
- --            inverse = true, -- invert background for search, diffs, statuslines and errors
- --            contrast = "hard", -- can be "hard", "soft" or empty string
- --            palette_overrides = {},
- --            overrides = {},
- --            dim_inactive = false,
- --            transparent_mode = false,
- --        })
- --        vim.cmd("colorscheme gruvbox")
- --    end,
 }
+
+-- #################### NORD ####################
+-- return {
+--     'shaunsingh/nord.nvim',
+--     priority = 1000,
+--     config = function()
+--         require("lualine").setup({
+--             options = {
+--                 theme = "nord"
+--             }
+--         })
+--
+--         vim.g.nord_italic = false
+--         vim.g.nord_bold = true
+--
+--         vim.cmd("colorscheme nord")
+--     end,
+-- }
+
+
+-- #################### GRUVBOX ####################
+-- return {
+-- "ellisonleao/gruvbox.nvim",
+-- priority = 1000,
+-- config = function()
+--        require("gruvbox").setup({
+--            undercurl = true,
+--            underline = true,
+--            bold = true,
+--            italic = {
+--                strings = false,
+--                comments = false,
+--            },
+--            strikethrough = true,
+--            invert_selection = false,
+--            invert_signs = false,
+--            invert_tabline = false,
+--            invert_intend_guides = false,
+--            inverse = true, -- invert background for search, diffs, statuslines and errors
+--            contrast = "hard", -- can be "hard", "soft" or empty string
+--            palette_overrides = {},
+--            overrides = {},
+--            dim_inactive = false,
+--            transparent_mode = false,
+--        })
+--        vim.cmd("colorscheme gruvbox")
+--    end,
+-- }
