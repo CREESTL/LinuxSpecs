@@ -2,7 +2,7 @@
 My development environment is Windows 11 + WSL (Ubuntu 20.04). Here are some config files I use to enhance my workflow.
 
 ### Config for NeoVim
-- Install NeoVim as shown [here](https://github.com/neovim/neovim/wiki/Installing-Neovim#debian)
+- Install NeoVim as shown [here](https://dev.to/asyncedd/building-neovim-from-source-1794)
 - Copy `nvim/` directory from this repo to `~/.config/`
 - Open `~/.config/nvim/` directory in NeoVim
 - Run `Lazy` NeoVim command. The Lazy UI must appear
