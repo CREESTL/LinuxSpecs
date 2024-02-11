@@ -12,6 +12,7 @@ My development environment is Windows 11 + WSL (Ubuntu 20.04). Here are some con
 
 ### Config for Tmux
 - Copy `tmux/` directory from this repo to `~/.config/`
+- Press `CTRL+B SHIFT+I`
 - Reload tmux
 
 ### Config for Zsh
@@ -21,12 +22,9 @@ My development environment is Windows 11 + WSL (Ubuntu 20.04). Here are some con
 - Install [ScreenFetch](https://github.com/KittyKatt/screenFetch) to see PC info in terminal
 - Install [nala](https://github.com/volitank/nala) wrapper for `apt`
 - Install [htop](https://github.com/htop-dev/htop) for system processes management
-- Copy `.zshrc` file to `~/` directory
-- Reload zsh
-
-### Config for Zsh Powerlevel10k theme
-- Install theme via Oh My Zsh. See [guide](https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#oh-my-zsh).
+- Install `powerlevel10k` theme via Oh My Zsh. See [guide](https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#oh-my-zsh)
 - Copy `.p10k.zsh` file to `~/` directory
+- Copy `.zshrc` file to `~/` directory
 - Reload zsh
 
 ### Config for Git
