@@ -3,6 +3,7 @@ My development environment is Windows 11 + WSL (Ubuntu 20.04). Here are some con
 
 ### Config for Neovim
 - Install NeoVim as shown [here](https://dev.to/asyncedd/building-neovim-from-source-1794)
+- Install [ripgrep](https://github.com/BurntSushi/ripgrep)
 - Copy `nvim/` directory from this repo to `~/.config/`
 - Open `~/.config/nvim/` directory in neovim
 - Run `Lazy` neovim command. The Lazy UI must appear
