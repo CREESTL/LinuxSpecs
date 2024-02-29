@@ -31,7 +31,7 @@ vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 vim.keymap.set("n", "Q", "<nop>")
 
 -- Reset highlighted elements
-vim.keymap.set("n", "<C-l>", "<cmd>:nohlsearch<CR>")
+vim.keymap.set("n", "<leader>l", "<cmd>:nohlsearch<CR>")
 
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
