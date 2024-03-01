@@ -125,3 +125,6 @@ bindkey '^ ' autosuggest-accept # CTRL + Space
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Add python packages to path
+PATH="$PATH:$HOME/.local/bin"
