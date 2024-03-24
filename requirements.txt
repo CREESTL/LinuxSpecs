@@ -1,0 +1,10 @@
+black
+mypy
+pytest
+requests
+numpy
+pandas
+matplotlib
+tensorflow
+keras
+slither-analyzer
