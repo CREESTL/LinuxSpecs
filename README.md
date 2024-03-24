@@ -45,3 +45,13 @@ responsible for keyboard inputs. For example the `jk` remap for quitting to Norm
 *Sync*  
 [Settings Sync](https://code.visualstudio.com/docs/editor/settings-sync) was activated to sync settings on all of my devices.  
 
+### Config for Python
+This config is ment to be applied to the 'global' Python of your system. So that you don't need to create a new venv each time just to lint/test/typecheck a Python project. But it can be used in venv perfectly fine.
+- Copy `requirements.txt` file from this repo to some location on your machine (e.g. `~/`)
+- `cd` to that directory
+- Run `python3 install -r requirements.txt`
+
+### Config for mypy
+- Make sure [mypy](https://mypy-lang.org/) is installed on your machine. For example, use `requirements.txt` from "Config for Python" section
+- Copy `.mypy.ini` file from this repo to `~/` directory
+
