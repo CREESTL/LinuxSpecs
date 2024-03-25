@@ -16,6 +16,7 @@ return {
 
     config = function()
         local lsp_zero = require('lsp-zero')
+        local util = require('lspconfig/util')
         
         lsp_zero.on_attach(function(client, bufnr)
             -- see :help lsp-zero-keybindings
@@ -37,6 +38,27 @@ return {
             },
             handlers = {
                 lsp_zero.default_setup,
+                -- Custom settings for Pyright server
+                require('lspconfig').pyright.setup{
+                    root_dir = function(fname)
+                        local root_files = {
+                            'pyrightconfig.json',
+                        }
+                        -- 'root_dir' is a directory where pyright starts crawling file tree for packages/modules from. 
+                        -- Place 'pyrightconfig.json' file to the directory you want pyright to start crawling.
+                        -- Usually, this is a root directory of your project
+                        return util.root_pattern(unpack(root_files))(fname)
+                    end,
+                    settings = {
+                        python = {
+                            analysis = {
+                                autoSearchPaths = true,
+                                useLibraryCodeForTypes = true,
+                                diagnosticMode = "workspace"
+                            }
+                        }
+                    }
+                }
             }
         })
         
