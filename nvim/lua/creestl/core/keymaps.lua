@@ -53,5 +53,5 @@ vim.keymap.set("n", "<ScrollWheelUp>", "<C-Y>")
 vim.keymap.set("n", "<ScrollWheelDown>", "<C-E>")
 
 -- Invert move to start of line and end of line
-vim.keymap.set("n", "$", "^")
-vim.keymap.set("n", "^", "$")
+vim.keymap.set({"n", "v"}, "$", "^")
+vim.keymap.set({"n", "v"}, "^", "$")
