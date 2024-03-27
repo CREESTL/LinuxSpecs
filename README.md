@@ -31,20 +31,6 @@ My development environment is Windows 11 + WSL (Ubuntu 20.04). Here are some con
 ### Config for Git
 - Copy `.gitconfig` file to `~/` directory
 
-### Config for VSCode 
-*Keys*  
-Some key remaps had to be done in `Settings` rather than in `~/.config/nvim/` as well, because VSCode is 
-responsible for keyboard inputs. For example the `jk` remap for quitting to Normal Mode. To import this keymaps:
-- Open VSCode
-- Press `Ctrl + Shift + P`
-- Search for `Open Keyboard Shortcuts`
-- On the shortcuts page look for a small "file with arrow" icon in the top right corner. Press on that icon
-- The `keybindings.json` file will pop up
-- Copy the contents of the `vscode_keybindings.json` file from this repo into the `keybindings.json` file opened in VSCode 
-
-*Sync*  
-[Settings Sync](https://code.visualstudio.com/docs/editor/settings-sync) was activated to sync settings on all of my devices.  
-
 ### Config for Python
 This config is ment to be applied to the 'global' Python of your system. So that you don't need to create a new venv each time just to lint/test/typecheck a Python project. But it can be used in venv perfectly fine.
 - Copy `requirements.txt` file from this repo to some location on your machine (e.g. `~/`)
