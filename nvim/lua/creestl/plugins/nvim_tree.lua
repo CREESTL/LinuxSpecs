@@ -15,6 +15,7 @@ return {
             view = {
                 width = 35,
                 relativenumber = true,
+                cursorline = false,
             },
             -- change folder arrow icons
             renderer = {
