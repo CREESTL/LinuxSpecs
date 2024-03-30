@@ -7,10 +7,7 @@ return {
     dependencies = {
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
-        "neovim/nvim-lspconfig",
-        "hrsh7th/cmp-nvim-lsp",
-        "hrsh7th/nvim-cmp",
-        "L3MON4D3/LuaSnip"
+        "neovim/nvim-lspconfig"
     },
 
 
@@ -62,15 +59,6 @@ return {
             }
         })
         
-        -- Preselect 1st option
-        local cmp = require('cmp')
-        
-        cmp.setup({
-            preselect = 'item',
-            completion = {
-                completeopt = 'menu,menuone,noinsert'
-            },
-        })
 
         -- Disable virtual text diagnostics
         vim.diagnostic.config(
