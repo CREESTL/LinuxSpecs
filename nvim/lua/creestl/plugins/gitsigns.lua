@@ -4,15 +4,15 @@ return {
         require("gitsigns").setup(
             {
                 signs = {
-                    add          = { text = '│' },
-                    change       = { text = '│' },
-                    delete       = { text = '_' },
-                    topdelete    = { text = '‾' },
+                    add          = { text = '║' },
+                    change       = { text = '║' },
+                    delete       = { text = '⚊' },
+                    topdelete    = { text = '⚍' },
                     changedelete = { text = '~' },
-                    untracked    = { text = '┆' },
+                    untracked    = { text = '⌇' },
                 },
-                signcolumn = true,  -- Toggle with `:Gitsigns toggle_signs`
-                numhl      = false, -- Toggle with `:Gitsigns toggle_numhl`
+                signcolumn = false,  -- Toggle with `:Gitsigns toggle_signs`
+                numhl      = true, -- Toggle with `:Gitsigns toggle_numhl`
                 linehl     = false, -- Toggle with `:Gitsigns toggle_linehl`
                 word_diff  = false, -- Toggle with `:Gitsigns toggle_word_diff`
                 watch_gitdir = {
@@ -49,7 +49,8 @@ return {
 
         -- Change color of virtual text
         vim.api.nvim_set_hl(0, 'GitsignsCurrentLineBlame', { fg = '#9370DB', bg = 'none' })
-
-        vim.keymap.set("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<CR>")
+        vim.keymap.set("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<CR>", {desc="Toggle current line blame"})
+        vim.keymap.set("n", "<leader>gs", ":Gitsigns toggle_signs<CR>", {desc="Toggle git signs in sign column"})
+        vim.keymap.set("n", "<leader>gn", ":Gitsigns toggle_numhl<CR>", {desc="Toggle highlight of numbers of changes lines"})
     end
 }
