@@ -56,14 +56,24 @@ return {
                         }
                     }
                 }
-            }
+            },
+
+            -- Set custom signs
+            lsp_zero.set_sign_icons({
+                error = '✘',
+                warn = ' ',
+                hint = '⚑',
+                info = ' '
+            })
         })
         
 
         -- Disable virtual text diagnostics
         vim.diagnostic.config(
             {
-                virtual_text = false,
+                virtual_text = false, -- Use floating windows instead
+                signs = true, -- Use signs in sign column
+                underline=true -- Use underline to show exact location of error in code
             }
         )
 

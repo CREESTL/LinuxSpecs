@@ -77,7 +77,13 @@ return {
             contrast = "hard", -- can be "hard", "soft" or empty string
             palette_overrides = {},
             overrides = {
-                NormalFloat = { bg = "none" }
+                NormalFloat = { bg = "none" }, -- Remove background in floating windows
+                SignColumn = { bg = "none" }, -- Remove background in sign column,
+                -- Remove background from diagnostic signs in sign column
+                DiagnosticSignError = { fg = "#cc241d", bg = "none"}, -- neutral red
+                DiagnosticSignWarn = { fg = "#b57614", bg = "none"}, -- neutral orange
+                DiagnosticSignInfo = { fg = "#b8bb26", bg = "none"}, -- bright green
+                DiagnosticSignHint = { fg = "#458588", bg = "none"}, -- neutran blue
             },
             dim_inactive = false,
             transparent_mode = false,
