@@ -47,7 +47,3 @@ vim.keymap.set({"v", "i"}, "jk", "<Esc>")
 -- Put empty lines above and below the current line
 vim.keymap.set("n", "[<space>", "<cmd>:pu! _<CR>:']+1<CR>")
 vim.keymap.set("n", "]<space>", "<cmd>:pu _<CR>:']-1<CR>")
-
--- Invert move to start of line and end of line
-vim.keymap.set({"n", "v"}, "$", "^")
-vim.keymap.set({"n", "v"}, "^", "$")
