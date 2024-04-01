@@ -34,17 +34,17 @@ return {
                 ["<C-e>"] = cmp.mapping.abort(), -- close completion window
                 ["<CR>"] = cmp.mapping.confirm(), -- autoselect 1st option
             }),
-            -- sources for autocompletion
+            -- Sources for autocompletion that work by default
             sources = cmp.config.sources({
                 { name = "buffer" }, 
                 { name = "path" },
                 { name = "nvim_lsp" },
-                { name = "cmdline"},
                 { name = "nvim_lua"}
             }),
             --  Change sources of completion for ':' command
             cmp.setup.cmdline(':', {
                 mapping = cmp.mapping.preset.cmdline(),
+                -- Use this source only in command line mode
                 sources = {
                     { name = 'cmdline' },
                 }
