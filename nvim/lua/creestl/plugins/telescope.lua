@@ -38,9 +38,5 @@ return {
         keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Fuzzy find files in cwd" })
         keymap.set("n", "<leader>fs", builtin.live_grep, { desc = "Find string in cwd" })
         keymap.set("n", "<leader>fr", builtin.resume, { desc = "Resume search" })
-        keymap.set("n", "<leader>fp", function()
-            builtin.grep_string({search = vim.fn.input("Find in project: ")})
-        end
-        )
     end,
 }

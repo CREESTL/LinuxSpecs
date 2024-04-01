@@ -13,7 +13,11 @@ return {
                 typescript = { "prettier" },
                 python = { "black" },
                 c = { "clang_format" }
-            }
+            },
+            format_on_save = {
+                lsp_fallback = true,
+                timeout_ms = 500,
+            },
         })
 
         vim.keymap.set({ "n", "v" }, "<leader>fc", function()

@@ -80,12 +80,12 @@ return {
         -- Make diagnosticts show in floating window
         vim.o.updatetime = 250
         vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
-        vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
+        vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, {desc="Open float diagnostic"})
         -- Switch between diagnostics
-        vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
-        vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
+        vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, {desc="Previous diagnostic"})
+        vim.keymap.set('n', ']d', vim.diagnostic.goto_next, {desc="Next diagnostic"})
         -- List all diagnostics
-        vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
+        vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, {desc="Toggle list of diagnostics"})
     end,
 
 }

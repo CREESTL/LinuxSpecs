@@ -17,9 +17,9 @@ return {
 		api.config.mappings.default_on_attach(bufnr)
 
 		-- Custom mappings
-		vim.keymap.set('n', '<leader>ef', api.tree.find_file)
-		vim.keymap.set('n', '<leader>ee', api.tree.toggle)
-		vim.keymap.set('n', '<leader>er', api.tree.reload)
+		vim.keymap.set('n', '<leader>ef', api.tree.find_file, {desc="Open current file in tree"})
+		vim.keymap.set('n', '<leader>ee', api.tree.toggle, {desc="Toggle tree"})
+		vim.keymap.set('n', '<leader>er', api.tree.reload, {desc="Reload tree"})
 
 	end
 
