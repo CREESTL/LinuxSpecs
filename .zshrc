@@ -15,7 +15,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-
+# ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
@@ -128,3 +128,19 @@ bindkey '^ ' autosuggest-accept # CTRL + Space
 
 # Add python packages to path
 PATH="$PATH:$HOME/.local/bin"
+
+# Run classic neovim config
+alias cnvim="NVIM_APPNAME=nvim_classic nvim"
+
+# Function to choose neovim config
+function nvims() {
+  items=("nvim_classic" "nvim_mini")
+  config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=50% --layout=reverse --border --exit-0)
+  if [[ -z $config ]]; then
+    echo "Nothing selected"
+    return 0
+  elif [[ $config == "default" ]]; then
+    config=""
+  fi
+  NVIM_APPNAME=$config nvim $@
+}
