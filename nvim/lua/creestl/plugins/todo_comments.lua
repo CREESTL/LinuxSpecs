@@ -1,5 +1,5 @@
 return {
-    "ffolke/todo-comments.nvimolke/todo-comments.nvim",
+    "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function() 
         require("todo-comments").setup(
