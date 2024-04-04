@@ -19,7 +19,7 @@ return {
                     col = '50%',
                 },
                 size = {
-                    width = '70%',
+                    width = '50%',
                     height = '100%',
                 },
                 border = {
