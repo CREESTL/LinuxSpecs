@@ -1,7 +1,7 @@
 local options = {
     backup = false,                          -- creates a backup file
     clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
-    cmdheight = 0,                           -- no need for cmdline because of floating window
+    cmdheight = 1,                           -- height of command line
     completeopt = { "menuone", "noselect" }, -- mostly just for cmp
     conceallevel = 0,                        -- so that `` is visible in markdown files
     showmode = false,                        -- do not show 'INSERT' or 'VISUAL' modes in command line
