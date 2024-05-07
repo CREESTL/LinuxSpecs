@@ -30,6 +30,7 @@ return {
                     "json",
                     "javascript",
                     "typescript",
+                    "dockerfile",
                     "markdown",
                     "markdown_inline",
                     "bash",
