@@ -1,0 +1,5 @@
+# Set the theme to "TwoDark"
+--theme="gruvbox-dark"
+
+# Use C++ syntax for Arduino .ino files
+--map-syntax "*.ino:C++"
