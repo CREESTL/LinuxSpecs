@@ -125,6 +125,7 @@ alias git='LANG=en_US git'
 alias cat='batcat'
 alias bat='batcat'
 alias du='dust'
+alias df='duf'
 
 bind 'TAB:menu-complete'
 bind 'set show-all-if-ambiguous on'
