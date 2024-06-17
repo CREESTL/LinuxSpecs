@@ -23,8 +23,12 @@ My development environment is Windows 11 + WSL (Ubuntu 20.04). Here are some con
 - Install [ScreenFetch](https://github.com/KittyKatt/screenFetch) to see PC info in terminal
 - Install [nala](https://github.com/volitank/nala) wrapper for `apt`
 - Install [htop](https://github.com/htop-dev/htop) for system processes management
+- Install [bat](https://github.com/sharkdp/bat) alternative to `cat`
+    - Copy `bat/` directory from this repo to `~/.config/`
+- Install [dust](https://github.com/bootandy/dust) alternative to `du`
+- Install [duf](https://github.com/muesli/duf) alternative to `df`
 - Install `powerlevel10k` theme via Oh My Zsh. See [guide](https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#oh-my-zsh)
-- Copy `.p10k.zsh` file to `~/` directory
+    - Copy `.p10k.zsh` file to `~/` directory
 - Copy `.zshrc` file to `~/` directory
 - Reload zsh
 
