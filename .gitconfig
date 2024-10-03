@@ -1,5 +1,5 @@
 [user]
-	email = kroymw3@yandex.ru
+	email = creestl.main@yandex.ru
 	name = CREESTL
 [cola]
 	spellcheck = false
@@ -13,7 +13,7 @@
 
 
 [core]
-	editor = nvim
+	editor = vim
 
 # Enforce using SSH instead of HTTP every time
 # (uncomment when needed)
@@ -32,3 +32,5 @@
 	recurse = true
 [push]
 	recurseSubmodules = on-demand
+[pager]
+	branch = false
