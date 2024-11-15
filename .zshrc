@@ -116,6 +116,7 @@ alias cat='batcat'
 alias bat='batcat'
 alias du='dust'
 alias df='duf'
+alias k='kubectl'
 
 # set path for CUDA on each startup
 export PATH=/usr/local/cuda-11.8/bin${PATH:+:${PATH}}
