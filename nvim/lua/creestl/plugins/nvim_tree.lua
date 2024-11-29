@@ -10,23 +10,22 @@ return {
         vim.g.loaded_netrw = 1
         vim.g.loaded_netrwPlugin = 1
 
-	local function my_on_attach(bufnr)
-		local api = require("nvim-tree.api")
-		
-		-- Default mappings
-		api.config.mappings.default_on_attach(bufnr)
+        local function my_on_attach(bufnr)
+            local api = require("nvim-tree.api")
 
-		-- Custom mappings
-		vim.keymap.set('n', '<leader>ef', api.tree.find_file, {desc="Open current file in tree"})
-		vim.keymap.set('n', '<leader>ee', api.tree.toggle, {desc="Toggle tree"})
-		vim.keymap.set('n', '<leader>er', api.tree.reload, {desc="Reload tree"})
+            -- Default mappings
+            api.config.mappings.default_on_attach(bufnr)
 
-	end
+            -- Custom mappings
+            vim.keymap.set('n', '<leader>ef', api.tree.find_file, { desc = "Open current file in tree" })
+            vim.keymap.set('n', '<leader>ee', api.tree.toggle, { desc = "Toggle tree" })
+            vim.keymap.set('n', '<leader>er', api.tree.reload, { desc = "Reload tree" })
+        end
 
         -- configure nvim-tree
         nvimtree.setup({
 
-	        on_attach = my_on_attach,
+            on_attach = my_on_attach,
 
             view = {
                 width = 35,
@@ -56,6 +55,5 @@ return {
                 ignore = false,
             },
         })
-
     end,
 }
