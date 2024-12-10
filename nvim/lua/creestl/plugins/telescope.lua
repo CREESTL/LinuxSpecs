@@ -14,8 +14,13 @@ return {
 
         telescope.setup({
             defaults = {
+                -- Files with these names (or directories) will be ignored in search
                 file_ignore_patterns = {
-                    "venv"
+                    "venv",
+                    "mypy_cache",
+                    "pytest_cache",
+                    "git",
+                    "__pycache__",
                 },
                 path_display = { "truncate " },
                 mappings = {
@@ -30,13 +35,21 @@ return {
 
         telescope.load_extension("fzf")
 
-        -- set keymaps
         local keymap = vim.keymap
 
         local builtin = require("telescope.builtin")
 
-        keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Fuzzy find files in cwd" })
-        keymap.set("n", "<leader>fs", builtin.live_grep, { desc = "Find string in cwd" })
+        keymap.set("n", "<leader>ff", function()
+            builtin.find_files({
+                find_command = {
+                    "rg",
+                    "--files",
+                    "--hidden",    -- Search in hidden files (starting with a dot)
+                    "--no-ignore", -- Do not ignore files from .gitignore
+                }
+            })
+        end, { desc = "Find file in directory" })
+        keymap.set("n", "<leader>fs", builtin.live_grep, { desc = "Find string in directory" })
         keymap.set("n", "<leader>fr", builtin.resume, { desc = "Resume search" })
     end,
 }
