@@ -44,8 +44,8 @@ return {
                 find_command = {
                     "rg",
                     "--files",
-                    "--hidden",    -- Search in hidden files (starting with a dot)
-                    "--no-ignore", -- Do not ignore files from .gitignore
+                    -- "--hidden",    -- Search in hidden files (starting with a dot)
+                    -- "--no-ignore", -- Do not ignore files from .gitignore
                 }
             })
         end, { desc = "Find file in directory" })
