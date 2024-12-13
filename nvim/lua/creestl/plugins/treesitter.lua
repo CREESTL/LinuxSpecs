@@ -6,6 +6,7 @@ return {
     build = ":TSUpdate",
     dependencies = {
         "nvim-treesitter/nvim-treesitter-textobjects",
+        'nvim-treesitter/playground',
         "windwp/nvim-ts-autotag",
     },
     config = function()
@@ -14,6 +15,11 @@ return {
         -- configure treesi
         -- enable syntax highlightingtter
         treesitter.setup({
+            playground = {
+                enable = true,
+                updatetime = 25,
+                persist_queries = false
+            },
 
             highlight = {
                 enable = true,
