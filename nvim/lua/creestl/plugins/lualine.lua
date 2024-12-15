@@ -7,19 +7,17 @@ return {
 
         lualine.setup({
             options = {
-                icons_enabled = true,
                 theme = 'auto',
-                section_separators = { left = '', right = '' },
-                always_divide_middle = true,
-                globalstatus = false,
-                refresh = {
-                    statusline = 1000,
-                    tabline = 1000,
-                    winbar = 1000,
-                }
+                component_separators = '',
+                section_separators = '',
             },
             sections = {
-                lualine_a = { 'mode' },
+                lualine_a = {
+                    {
+                        'mode',
+                        separator = { left = '' },
+                    }
+                },
                 lualine_b = {
                     {
                         'filename',
@@ -48,7 +46,7 @@ return {
                         symbols = { error = 'E', warn = 'W' },
                         always_visible = false,
                         update_in_insert = false,
-                        separator = { left='┃'},
+                        separator = { left = '┃' },
                     }
                 },
                 lualine_x = {
@@ -64,7 +62,12 @@ return {
                     }
                 },
                 lualine_y = { 'filetype' },
-                lualine_z = { 'location' }
+                lualine_z = {
+                    {
+                        'location',
+                        separator = { right = '' },
+                    }
+                }
             },
 
         })
