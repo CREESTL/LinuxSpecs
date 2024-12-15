@@ -172,6 +172,7 @@ return {
             -- Set "true" to disable for chosen plugin.
             disable_plugin = {
                 telescope = true,
+                tree = true,
             },
         })
 
