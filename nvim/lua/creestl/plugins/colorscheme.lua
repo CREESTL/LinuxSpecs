@@ -58,7 +58,7 @@ return {
                 lack = "default",
                 luster = "default",
                 orange = "default",
-                yellow = "#f8f20c",
+                yellow = "#e1cf1c",
                 green = "default",
                 blue = "default",
                 red = "default",
