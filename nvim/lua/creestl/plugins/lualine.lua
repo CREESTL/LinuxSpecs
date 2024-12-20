@@ -15,8 +15,8 @@ return {
                 lualine_a = {
                     {
                         'mode',
-                        separator = { left = '' },
                     }
+
                 },
                 lualine_b = {
                     {
@@ -65,7 +65,6 @@ return {
                 lualine_z = {
                     {
                         'location',
-                        separator = { right = '' },
                     }
                 }
             },
