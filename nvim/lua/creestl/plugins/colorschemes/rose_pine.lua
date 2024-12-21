@@ -68,16 +68,16 @@ return {
                 String = { fg = "foam" },
                 ["@string.regexp"] = { fg = "foam" },
 
-                -- Number = { fg = "rose" },
-                -- ["@constant"] = { fg = "rose" },
-                -- ["@constant.builtin"] = { fg = "rose" },
-                --
-                -- ["@keyword"] = { fg = "gold" },
-                -- ["@keyword.return"] = { fg = "gold" },
-                -- ["@keyword.repeat"] = { fg = "gold" },
-                -- ["@keyword.conditional"] = { fg = "gold" },
-                -- ["@keyword.exception"] = { fg = "gold" },
-                -- ["@keyword.operator"] = { fg = "gold" },
+                Number = { fg = "rose" },
+                ["@constant"] = { fg = "rose" },
+                ["@constant.builtin"] = { fg = "rose" },
+
+                ["@keyword"] = { fg = "gold" },
+                ["@keyword.return"] = { fg = "gold" },
+                ["@keyword.repeat"] = { fg = "gold" },
+                ["@keyword.conditional"] = { fg = "gold" },
+                ["@keyword.exception"] = { fg = "gold" },
+                ["@keyword.operator"] = { fg = "gold" },
             },
 
             before_highlight = function(group, highlight, palette)
