@@ -27,7 +27,7 @@ return {
                 -- To customize lualine/bufferline
                 bufferline = {
                     current = {},
-                    modified = {},
+                    modified = { italic = false},
                 },
             },
 

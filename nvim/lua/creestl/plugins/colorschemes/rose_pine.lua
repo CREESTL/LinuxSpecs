@@ -64,10 +64,12 @@ return {
             -- See all colors in the pallete: https://rosepinetheme.com/palette/
             highlight_groups = {
 
+                -- These are essential
                 Comment = { fg = "muted" },
                 String = { fg = "foam" },
                 ["@string.regexp"] = { fg = "foam" },
 
+                -- These are optional
                 Number = { fg = "rose" },
                 ["@constant"] = { fg = "rose" },
                 ["@constant.builtin"] = { fg = "rose" },
