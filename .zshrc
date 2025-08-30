@@ -133,3 +133,4 @@ bindkey '^ ' autosuggest-accept # CTRL + Space
 
 # Add python packages to path
 PATH="$PATH:$HOME/.local/bin"
+eval "$(uv generate-shell-completion zsh)"
