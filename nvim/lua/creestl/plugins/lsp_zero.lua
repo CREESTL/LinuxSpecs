@@ -25,7 +25,8 @@ return {
             handlers = {
                 -- Set up each of installed language servers
                 function(server_name)
-                    require('lspconfig')[server_name].setup({})
+                    vim.lsp.config(server_name, {})
+                    vim.lsp.enable(server_name)
                 end,
             },
         })
